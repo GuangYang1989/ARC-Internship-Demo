@@ -1,10 +1,14 @@
 # ARC-Internship-Demo
 
-Install dependancies:
-1 $ yarn
-2 $ cd client
-3 $ yarn
+## Install dependancies:
+$ yarn
 
-Start demo:
+$ cd client
+
+$ yarn
+
+## Start demo:
 & yarn dev
 
+## Demo screenshot:
+![2019-10-09 (5)](https://user-images.githubusercontent.com/48000300/66465155-ad635000-eac3-11e9-8b14-31952bdec522.png)
