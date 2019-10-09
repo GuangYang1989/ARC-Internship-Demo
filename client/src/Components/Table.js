@@ -64,10 +64,8 @@ export default function CustomizedTables() {
   }, []);
 
 
-  {
-    data.slice(-12).forEach(item => rows.push(createData(item.COUNT_TIME.substring(5, 16), item.ANIMAL_ALL, Math.floor((item.ANIMAL_EATING / item.ANIMAL_ALL) * 100),
-      Math.floor(item.FOOD_VOLUME / 130), item.FOOD_SIZE * 2, 'Insta 3')))
-  };
+  data.slice(-12).forEach(item => rows.push(createData(item.COUNT_TIME.substring(5, 16), item.ANIMAL_ALL, Math.floor((item.ANIMAL_EATING / item.ANIMAL_ALL) * 100),
+    Math.floor(item.FOOD_VOLUME / 130), item.FOOD_SIZE * 2, 'Insta 3')));
 
 
   return (
@@ -85,7 +83,7 @@ export default function CustomizedTables() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.reverse().map(row => (
+          {rows.reverse().forEach(row => (
             <StyledTableRow key={row.name}>
               <StyledTableCell component="th" scope="row">
                 {row.date}
