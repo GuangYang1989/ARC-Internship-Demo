@@ -19,6 +19,7 @@ import Typography from "@material-ui/core/Typography";
 // import InfoIcon from "@material-ui/icons/Info";
 import { withRouter } from "react-router-dom";
 
+// all the comment codes in this file are used to build a navigation bar if needed in future.
 const drawerWidth = 210;
 
 const styles = theme => ({

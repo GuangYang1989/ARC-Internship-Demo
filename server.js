@@ -13,9 +13,9 @@ const connection = mysql.createConnection({
   password: '1234',
   database: 'animal_db',
   dateStrings: true
-
 });
 
+// Set up the database privileges by running the following sql.
 // ALTER USER 'ARC'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234'
 // GRANT ALL PRIVILEGES ON *.* TO 'ARC'@'localhost' WITH GRANT OPTION;
 
@@ -32,7 +32,6 @@ connection.connect(err => {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// console.log(connection);
 app.get('/', (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
   connection.query(selectAll, (err, results) => {

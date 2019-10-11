@@ -27,7 +27,7 @@ const Analysis = () => {
   const inputVideo = "/video/input.mp4";
   const outputVideo = "/video/output.mp4";
 
-
+  // fetch data in a json format from database server
   useEffect(() => {
     async function fetchData() {
       const res = await fetch('http://localhost:5000/');
@@ -40,6 +40,7 @@ const Analysis = () => {
     fetchData();
   }, []);
 
+  // set timer and reload page hourly
   useEffect(() => {
     const interval = setInterval(() => {
       window.location.reload();
@@ -50,19 +51,24 @@ const Analysis = () => {
     };
   }, []);
 
+  // get last 24 rows
   const hourData = data.slice(-24)
+  // get 7 rows where the time is between 22:00 to 23:00
   const dayData = data.filter(item => item.COUNT_TIME !== null ?
     item.COUNT_TIME.substring(11, 13) === '22' : '').slice(-7)
 
+  // Iterate the hour data and add items to different arrays.
   hourData.forEach(item => {
     hourLabel.push(item.COUNT_TIME.substring(11, 16));
     eatingData.push(Math.floor((item.ANIMAL_EATING / item.ANIMAL_ALL) * 100));
     foodData.push(item.FOOD_VOLUME / 130);
   });
 
+  // Iterater the day data and add items to a new array.
   dayData.forEach(item => { animalData.push(item.ANIMAL_ALL); dayLabel.push(item.COUNT_TIME.substring(5, 10)) }
   );
 
+  // Bar chart
   const bar = {
     labels: hourLabel,
     datasets: [
@@ -92,6 +98,7 @@ const Analysis = () => {
     ],
   };
 
+  // Line chart
   const line = {
     labels: dayLabel,
     datasets: [
