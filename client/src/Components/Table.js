@@ -83,12 +83,12 @@ export default function CustomizedTables() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.reverse().forEach(row => (
-            <StyledTableRow key={row.name}>
+          {rows.reverse().map(row => (
+            <StyledTableRow key={row.date}>
               <StyledTableCell component="th" scope="row">
                 {row.date}
               </StyledTableCell>
-              <StyledTableCell align="right">{row.amount}</StyledTableCell>
+              <StyledTableCell compinent="th" align="right">{row.amount}</StyledTableCell>
               <StyledTableCell align="right">{row.eating}</StyledTableCell>
               <StyledTableCell align="right">{row.foodVolume}</StyledTableCell>
               <StyledTableCell align="right">{row.foodSize}</StyledTableCell>
