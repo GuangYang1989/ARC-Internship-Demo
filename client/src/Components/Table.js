@@ -88,7 +88,7 @@ export default function CustomizedTables() {
               <StyledTableCell component="th" scope="row">
                 {row.date}
               </StyledTableCell>
-              <StyledTableCell compinent="th" align="right">{row.amount}</StyledTableCell>
+              <StyledTableCell align="right">{row.amount}</StyledTableCell>
               <StyledTableCell align="right">{row.eating}</StyledTableCell>
               <StyledTableCell align="right">{row.foodVolume}</StyledTableCell>
               <StyledTableCell align="right">{row.foodSize}</StyledTableCell>
