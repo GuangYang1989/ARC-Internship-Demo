@@ -104,7 +104,7 @@ const Analysis = () => {
     datasets: [
       {
         type: 'line',
-        label: 'Animal Amout',
+        label: 'Animal Count',
         fill: false,
         backgroundColor: 'black',
         borderColor: 'black',
@@ -130,7 +130,7 @@ const Analysis = () => {
         <Table />
       </Container>
       <Container1>
-        <h4>Feeding Monitoring - Hourly Trend</h4>
+        <h4>Feed Monitoring - Hourly Trend</h4>
         <Bar
           data={bar}
           height={128}

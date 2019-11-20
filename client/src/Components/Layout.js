@@ -57,7 +57,7 @@ const Layout = props => {
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
           <Typography variant="h6" color="inherit" noWrap>
-            Larvae Counting and Feeding Monitoring System
+            Larvae Counting and Feed Monitoring System
           </Typography>
         </Toolbar>
       </AppBar>

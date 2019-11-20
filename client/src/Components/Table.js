@@ -74,7 +74,7 @@ export default function CustomizedTables() {
         <TableHead>
           <TableRow>
             <StyledTableCell>Date</StyledTableCell>
-            <StyledTableCell align="right">Animal Amount</StyledTableCell>
+            <StyledTableCell align="right">Animal Count</StyledTableCell>
             <StyledTableCell align="right">Eating(%)</StyledTableCell>
             <StyledTableCell align="right">Food Volume(mL)</StyledTableCell>
             <StyledTableCell align="right">Food Size(mm²)</StyledTableCell>
